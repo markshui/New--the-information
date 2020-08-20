@@ -1,0 +1,1302 @@
+ï»¿DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š992675
+DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š933823
+DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š258653
+DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š004913
+DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š419878
+DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š642945
+ERROR views.py:149 (MySQLdb._exceptions.IntegrityError) (1062, "Duplicate entry '13289359945' for key 'mobile'")
+[SQL: INSERT INTO info_user (create_time, update_time, nick_name, password_hash, mobile, avatar_url, last_login, is_admin, signature, gender) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)]
+[parameters: (datetime.datetime(2020, 4, 9, 19, 32, 35, 253678), datetime.datetime(2020, 4, 9, 19, 32, 35, 253697), '13289359945', 'pbkdf2:sha256:150000$gY6aR2U5$a201cdf4ae5d9c13d4b0c357a0aadbb8db9abb660b6a53068892388469bff684', '13289359945', None, datetime.datetime(2020, 4, 9, 19, 32, 35, 109164), 0, None, 'MAN')]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+DEBUG views.py:212 çŸ­ä¿¡éªŒè¯ç çš„å†…å®¹ï¼š006835
+DEBUG connectionpool.py:959 Starting new HTTPS connection (1): uc.qbox.me:443
+DEBUG connectionpool.py:437 https://uc.qbox.me:443 "GET /v1/query?ak=uc2U36YPfZG7pVai_YWyEwAZ35LgszUtm1_p6a7s&bucket=840017951 HTTP/1.1" 200 508
+DEBUG retry.py:229 Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG connectionpool.py:225 Starting new HTTP connection (1): up-z2.qiniu.com:80
+DEBUG connectionpool.py:437 http://up-z2.qiniu.com:80 "POST / HTTP/1.1" 200 76
+DEBUG connectionpool.py:266 Resetting dropped connection: up-z2.qiniu.com
+DEBUG connectionpool.py:437 http://up-z2.qiniu.com:80 "POST / HTTP/1.1" 200 76
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR common.py:31 (MySQLdb._exceptions.OperationalError) (1049, "Unknown database 'info_xjzx'")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+ERROR app.py:1891 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1049, "Unknown database 'info_xjzx'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\utils\common.py", line 34, in wrapper
+    return f(*args, **kwargs)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\modules\index\views.py", line 72, in index
+    for news in news_list:
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3411, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3426, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3404, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1133, in connection
+    execution_options=execution_options,
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1139, in _connection_for_bind
+    engine, execution_options
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 432, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2242, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2280, in _wrap_pool_connect
+    e, dialect, self
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 1547, in _handle_dbapi_exception_noconnection
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1049, "Unknown database 'info_xjzx'")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1049, "Unknown database 'info_xjzx'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\utils\common.py", line 34, in wrapper
+    return f(*args, **kwargs)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\modules\index\views.py", line 72, in index
+    for news in news_list:
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3411, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3426, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3404, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1133, in connection
+    execution_options=execution_options,
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1139, in _connection_for_bind
+    engine, execution_options
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 432, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2242, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2280, in _wrap_pool_connect
+    e, dialect, self
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 1547, in _handle_dbapi_exception_noconnection
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1049, "Unknown database 'info_xjzx'")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:34:45] "GET / HTTP/1.1" 500 -
+ERROR app.py:1891 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:34:49] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR common.py:31 (MySQLdb._exceptions.OperationalError) (1049, "Unknown database 'information'")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+ERROR app.py:1891 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1049, "Unknown database 'information'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\utils\common.py", line 34, in wrapper
+    return f(*args, **kwargs)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\modules\index\views.py", line 72, in index
+    for news in news_list:
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3411, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3426, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3404, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1133, in connection
+    execution_options=execution_options,
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1139, in _connection_for_bind
+    engine, execution_options
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 432, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2242, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2280, in _wrap_pool_connect
+    e, dialect, self
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 1547, in _handle_dbapi_exception_noconnection
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1049, "Unknown database 'information'")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+MySQLdb._exceptions.OperationalError: (1049, "Unknown database 'information'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\utils\common.py", line 34, in wrapper
+    return f(*args, **kwargs)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\modules\index\views.py", line 72, in index
+    for news in news_list:
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3389, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3411, in _execute_and_instances
+    querycontext, self._connection_from_session, close_with_result=True
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3426, in _get_bind_args
+    mapper=self._bind_mapper(), clause=querycontext.statement, **kw
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\query.py", line 3404, in _connection_from_session
+    conn = self.session.connection(**kw)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1133, in connection
+    execution_options=execution_options,
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 1139, in _connection_for_bind
+    engine, execution_options
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\orm\session.py", line 432, in _connection_for_bind
+    conn = bind._contextual_connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2242, in _contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2280, in _wrap_pool_connect
+    e, dialect, self
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 1547, in _handle_dbapi_exception_noconnection
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\base.py", line 2276, in _wrap_pool_connect
+    return fn()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 363, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 773, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 492, in checkout
+    rec = pool._do_get()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 139, in _do_get
+    self._dec_overflow()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\util\compat.py", line 153, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\impl.py", line 136, in _do_get
+    return self._create_connection()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 308, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 437, in __init__
+    self.__connect(first_connect_check=True)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\pool\base.py", line 652, in __connect
+    connection = pool._invoke_creator(self)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\strategies.py", line 114, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\sqlalchemy\engine\default.py", line 489, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\__init__.py", line 84, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\MySQLdb\connections.py", line 179, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+sqlalchemy.exc.OperationalError: (MySQLdb._exceptions.OperationalError) (1049, "Unknown database 'information'")
+(Background on this error at: http://sqlalche.me/e/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:38:47] "GET / HTTP/1.1" 500 -
+ERROR app.py:1891 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:38:51] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1891 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:39:19] "GET / HTTP/1.1" 500 -
+ERROR app.py:1891 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:39:24] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1891 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:41:29] "GET / HTTP/1.1" 500 -
+ERROR app.py:1891 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2268, in process_response
+    self.session_interface.save_session(self, ctx.session, response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 166, in save_session
+    time=total_seconds(app.permanent_session_lifetime))
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1787, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:41:33] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:43:55] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:43:55] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:02] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:08] "GET /news/2241 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:08] "GET /static/news/js/detail.js HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:08] "GET /static/news/images/comment_icon.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:08] "GET /static/news/images/collect_icons.png HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:11] "GET /news/1086 HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:44:55] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:45:30] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:45:36] "GET /passport/image_code?imageCodeId=73acabb5-2b8c-4b11-a905-1f0d9e5e9ec2 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:45:50] "GET /passport/image_code?imageCodeId=7ce5e441-fbb4-4ba3-88f2-66ceee3ae068 HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º375433
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:01] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º814912
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:07] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º053789
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:28] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º889634
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:29] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º827982
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:31] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:48] "POST /passport/register HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º904604
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:46:52] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:04] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:05] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:06] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:20] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:27] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:33] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:36] "GET /passport/image_code?imageCodeId=dc187576-9a37-4711-b195-5f5ee7742cc5 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:47:40] "GET /passport/image_code?imageCodeId=545d365d-352b-44db-b120-e2be70dfba19 HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º239104
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:01] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:12] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:13] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:16] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:16] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:16] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:16] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:17] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:17] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:27] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:27] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:28] "POST /passport/register HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º374624
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:31] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:34] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:34] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:34] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:45] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:46] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:46] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:46] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:55] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:55] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:55] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:48:58] "GET /news/2241 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:49:00] "GET /news/134 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:49:05] "GET /news/134 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:49:39] "GET /passport/image_code?imageCodeId=d475b7b4-be41-4e31-9285-12f188382440 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:50:00] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:50:06] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:50:06] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:50:47] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:50:50] "GET /passport/image_code?imageCodeId=70726747-315f-48d2-9cbb-75a347888bfc HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:51:24] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:51:35] "GET /news/1086 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:51:55] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:51:55] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:51:58] "GET /passport/image_code?imageCodeId=abdd8776-720a-43c6-b978-ec29dda86757 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:52:03] "GET /passport/image_code?imageCodeId=91787005-0f75-45ac-81a7-faca39385651 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:52:04] "GET /passport/image_code?imageCodeId=9b93ae2d-6e3b-4df9-ba90-aa5fe431dea0 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:52:04] "GET /passport/image_code?imageCodeId=678cf458-af22-4004-943f-c6e03c1b17c6 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:52:04] "GET /passport/image_code?imageCodeId=413991de-6d3e-4da3-a51a-261c1ad94195 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:52:35] "GET /news/134 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 11:52:48] "GET /passport/image_code?imageCodeId=62c64b5b-e51b-4ac9-91a3-1316ae59208b HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:43:38] "GET /passport/image_code?imageCodeId=3c554a53-a328-4652-9559-b528a12ce5fd HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:44:09] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:44:11] "GET /passport/image_code?imageCodeId=7bf0b45b-1f1f-4ce5-87e0-906d84af9f33 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:44:22] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:44:24] "GET /passport/image_code?imageCodeId=95ed1864-476b-4c39-bacd-4ddfd108801c HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º479076
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:44:46] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:44:49] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:17] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:19] "GET /passport/image_code?imageCodeId=ad5c4c2c-0b17-408d-977e-7b926affedd8 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:35] "POST /passport/register HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º218357
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:42] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:52] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:58] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:59] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:45:59] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:00] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:17] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:18] "POST /passport/register HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º707399
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:19] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:32] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:33] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:33] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:33] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:33] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:33] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:34] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:34] "POST /passport/register HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:34] "POST /passport/register HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º292825
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:35] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:40] "GET /news/2241 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:41] "GET /news/86 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 13:46:45] "GET /news/1289 HTTP/1.1" 200 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1891 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2445, in wsgi_app
+    ctx.push()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\ctx.py", line 390, in push
+    self.session = session_interface.open_session(self.app, self.request)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 132, in open_session
+    val = self.redis.get(self.key_prefix + sid)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1579, in get
+    return self.execute_command('GET', name)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+ERROR app.py:1975 Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 552, in connect
+    sock = self._connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 609, in _connect
+    raise err
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 597, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2445, in wsgi_app
+    ctx.push()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\ctx.py", line 390, in push
+    self.session = session_interface.open_session(self.app, self.request)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_session\sessions.py", line 132, in open_session
+    val = self.redis.get(self.key_prefix + sid)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 1579, in get
+    return self.execute_command('GET', name)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\client.py", line 875, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 1185, in get_connection
+    connection.connect()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\redis\connection.py", line 557, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. ÓÉÓÚÄ¿±ê¼ÆËã»ú»ý¼«¾Ü¾ø£¬ÎÞ·¨Á¬½Ó¡£.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask\app.py", line 2266, in process_response
+    response = handler(response)
+  File "D:\ÉÏ¿Î´úÂë\µÚÈý½×¶Î\¿Î¼þ\ÐÂ¾­×ÊÑ¶ÏîÄ¿\information\info\__init__.py", line 82, in after_request
+    csrf_token = generate_csrf()
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\flask_wtf\csrf.py", line 45, in generate_csrf
+    if field_name not in session:
+  File "C:\ProgramData\Anaconda3\envs\flask_new\lib\site-packages\werkzeug\local.py", line 380, in <lambda>
+    __contains__ = lambda x, i: i in x._get_current_object()
+TypeError: argument of type 'NoneType' is not iterable
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 18:56:54] "GET / HTTP/1.1" 500 -
+INFO _internal.py:122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 18:58:18] "GET / HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 18:58:20] "GET /news/2241 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 18:58:24] "GET /passport/image_code?imageCodeId=5ae9c59a-85a3-4eff-b240-162d851272f8 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 18:58:35] "GET /news/1289 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:02:29] "GET /news/134 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:02:33] "GET /news/297 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:02:43] "GET /news/134 HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:02:50] "POST /passport/login HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:04:54] "GET /passport/image_code?imageCodeId=e781650b-0f49-4823-996d-d95723ebc532 HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º406117
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:05:25] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º258402
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:05:27] "POST /passport/sms_code HTTP/1.1" 200 -
+DEBUG views.py:221 ¶ÌÐÅÑéÖ¤ÂëµÄÄÚÈÝ£º952338
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:05:27] "POST /passport/sms_code HTTP/1.1" 200 -
+INFO _internal.py:122 127.0.0.1 - - [17/Aug/2020 19:05:28] "POST /passport/register HTTP/1.1" 200 -
